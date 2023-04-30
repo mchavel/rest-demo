@@ -1,0 +1,50 @@
+{"_id":{"$oid":"644098b8b688a78cf274344e"},"title":"Kind of Blue","artist":"Miles Davis","year":1959,"label":"Columbia"}
+{"_id":{"$oid":"644098b8b688a78cf274344f"},"title":"Beggars Banquet","artist":"The Rolling Stones","year":1968,"label":"Decca"}
+{"_id":{"$oid":"644098b8b688a78cf2743450"},"title":"Get Yer Ya-Yas Out","artist":"The Rolling Stones","year":1970,"label":"Decca"}
+{"_id":{"$oid":"644098b8b688a78cf2743451"},"title":"Blood On The Tracks","artist":"Bob Dylan","label":"Columbia"}
+{"_id":{"$oid":"644098b8b688a78cf2743452"},"title":"Sgt Peppers Lonely Hearts Club Band","artist":"Beatles","label":"Capitol","year":1967}
+{"_id":{"$oid":"644098b8b688a78cf2743453"},"title":"Yer Album","artist":"James Gang","label":"Bluesway","year":1969}
+{"_id":{"$oid":"644098b8b688a78cf2743454"},"title":"Second Winter","artist":"Johnny Winter","label":"Columbia","year":1969}
+{"_id":{"$oid":"644098b8b688a78cf2743455"},"title":"Nothin But The Blues","artist":"Johnny Winter","label":"Columbia","year":1977}
+{"_id":{"$oid":"644098b8b688a78cf2743456"},"title":"Back In Black","artist":"AC/DC","label":"Atlantic","year":1980}
+{"_id":{"$oid":"644098b8b688a78cf2743457"},"title":"Night Moves","artist":"Bob Seger and The Silver Bullet Band","label":"Capitol","year":1976}
+{"_id":{"$oid":"644098b8b688a78cf2743458"},"title":"The London Howlin' Wolf Sessions","artist":"Howlin' Wolf","label":"Chess","year":1971}
+{"_id":{"$oid":"644098b8b688a78cf2743459"},"title":"Harvest","artist":"Neil Young","label":"Reprise","year":1972}
+{"_id":{"$oid":"644098b8b688a78cf274345a"},"title":"Booty and the Beast","artist":"Popa Chubby","label":"Okeh Records","year":1995}
+{"_id":{"$oid":"644098b8b688a78cf274345b"},"title":"Sticky Fingers","artist":"The Rolling Stones","label":"Rolling Stones Records","year":1971}
+{"_id":{"$oid":"644098b8b688a78cf274345c"},"title":"Exile on Main St.","artist":"The Rolling Stones","label":"Rolling Stones Records","year":1972}
+{"_id":{"$oid":"644098b8b688a78cf274345d"},"title":"Abraxas","artist":"Santana","label":"Columbia","year":1970}
+{"_id":{"$oid":"644098b8b688a78cf274345e"},"title":"Chicken Skin Music","artist":"Ry Cooder","label":"Reprise","year":1976}
+{"_id":{"$oid":"644098b8b688a78cf274345f"},"title":"Axis: Bold As Love","artist":"Jimi Hendrix","label":"Track Records","year":1967}
+{"_id":{"$oid":"644098b8b688a78cf2743460"},"title":"Are You Experienced","artist":"Jimi Hendrix","label":"Track Records","year":1967}
+{"_id":{"$oid":"644098b8b688a78cf2743461"},"title":"Aerosmith","artist":"Aerosmith","label":"Columbia","year":1972}
+{"_id":{"$oid":"644098b8b688a78cf2743462"},"title":"The Hardest Part","artist":"Allison Moorer","label":"MCA","year":2000}
+{"_id":{"$oid":"644098b8b688a78cf2743463"},"title":"Live 1973","artist":"Gram Parsons and the Fallen Angels","label":"Sierra Records","year":1982}
+{"_id":{"$oid":"644098b8b688a78cf2743464"},"title":"A Nod's As Good As a Wink... to a Blind Horse","artist":"Faces","label":"Warner","year":1971}
+{"_id":{"$oid":"644098b8b688a78cf2743465"},"title":"Blues Breakers","artist":"John Mayall with Eric Clapton","label":"Decca","year":1966}
+{"_id":{"$oid":"644098b8b688a78cf2743466"},"title":"Led Zeppelin","artist":"Led Zeppelin","label":"Atlantic","year":1969}
+{"_id":{"$oid":"644098b8b688a78cf2743467"},"title":"Live at the Regal","artist":"B. B. King","label":"ABC","year":1965}
+{"_id":{"$oid":"644098b8b688a78cf2743468"},"title":"Live In Cook County Jail","artist":"B. B. King","label":"ABC","year":1971}
+{"_id":{"$oid":"644098b8b688a78cf2743469"},"title":"Hoodoo Man Blues","artist":"Junior Wells","label":"Delmark","year":1965}
+{"_id":{"$oid":"644098b8b688a78cf274346a"},"title":"West Side Soul","artist":"Magic Sam","label":"Delmark","year":1968}
+{"_id":{"$oid":"644098b8b688a78cf274346b"},"title":"Hard Again","artist":"Muddy Waters","label":"Blue Sky","year":1977}
+{"_id":{"$oid":"644098b8b688a78cf274346c"},"title":"Freddy King Sings","artist":"Freddie King","label":"King","year":1961}
+{"_id":{"$oid":"64409a2cb688a78cf274346d"},"title":"Love Me Mama","artist":"Luther Allison","label":"Delmark","year":1969}
+{"_id":{"$oid":"64409aa2b688a78cf274346e"},"title":"The Beatles","artist":"The Beatles","label":"Apple","year":1968}
+{"_id":{"$oid":"64409b92b688a78cf274346f"},"title":"I Never Loved a Man the Way I Love You ","artist":"Aretha Franklin","label":"Atlantic","year":1967}
+{"_id":{"$oid":"64409c3ab688a78cf2743470"},"title":"Lady Soul","artist":"Aretha Franklin","label":"Atlantic","year":1968}
+{"_id":{"$oid":"64409db6b688a78cf2743471"},"title":"The Temptations Sing Smokey","artist":"The Temptations","label":"Gordy","year":1965}
+{"_id":{"$oid":"64409e11b688a78cf2743472"},"title":"Live at Leeds","artist":"The Who","label":"Decca","year":1970}
+{"_id":{"$oid":"64409e82b688a78cf2743473"},"title":"Cosmos Factory","artist":"Creedence Clearwater Revival","label":"Fantasy","year":1970}
+{"_id":{"$oid":"64409f31b688a78cf2743474"},"title":"Deja Vue","artist":"Crosnt, Stills, Nash & Young","label":"Atlantic","year":1970}
+{"_id":{"$oid":"64409fecb688a78cf2743475"},"title":"Everybody Knows This is Nowhere","artist":"Neil Young","label":"Reprise","year":1969}
+{"_id":{"$oid":"6440a106b688a78cf2743476"},"title":"PEARL","artist":"Janis Joplin","label":"Columbia","year":1971}
+{"_id":{"$oid":"6440a18fb688a78cf2743477"},"title":"Untitled","artist":"Led Zeppelin","label":"Atlantic","year":1971}
+{"_id":{"$oid":"6440a1b4b688a78cf2743478"},"title":"Led Zeppelin III","artist":"Led Zeppelin","label":"Atlantic","year":1970}
+{"_id":{"$oid":"6440a1c5b688a78cf2743479"},"title":"Led Zeppelin II","artist":"Led Zeppelin","label":"Atlantic","year":1969}
+{"_id":{"$oid":"6440a1f8b688a78cf274347a"},"title":"Let It Bleed","artist":"The Rolling Stones","label":"Decca","year":1969}
+{"_id":{"$oid":"6440a248b688a78cf274347b"},"title":"40 Blue Fingers, Freshly Packed and Ready to Serve","artist":"Chicken Shack","label":"Blue Horizon","year":1968}
+{"_id":{"$oid":"6440a4acb688a78cf274347c"},"title":"Jackson Browne","artist":"Jackson Browne","label":"Asylum","year":1972}
+{"_id":{"$oid":"6440a56db688a78cf274347d"},"title":"Let's Hide Away and Dance Away with Freddy King","artist":"Freddie King","label":"King","year":1961}
+{"_id":{"$oid":"6440a680b688a78cf274347e"},"title":"12 Of His Biggest Hits","artist":"Eddie Cochran","label":"Liberty","year":1960}
+{"_id":{"$oid":"6440a787b688a78cf274347f"},"title":"Chuck Berry Is On Top","artist":"Chuck Berry","label":"Chess","year":1959}

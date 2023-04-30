@@ -1,0 +1,26 @@
+version: "3"
+services:
+  api-demo-mongodb:
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - api-demo-mongo:/data/db
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=mongoadmin
+      - MONGO_INITDB_ROOT_PASSWORD=secret
+  api-demo-app:
+    build: 
+      context: .
+      no_cache: true
+    ports: 
+      - "5000:5000"
+    environment:
+      - MONGO_HOST=api-demo-mongodb
+      - MONGO_PORT=27017
+    depends_on:
+      - api-demo-mongodb    
+volumes:
+  api-demo-mongo:
+    driver: local
+      
