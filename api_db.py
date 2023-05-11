@@ -103,7 +103,6 @@ class DBMock(DB):
     def get(self, id: str) -> Any:
         if id in self._data:
             obj = self._data.get(id)
-            obj['_id'] = id
             return obj
         else:
             return None
@@ -111,6 +110,7 @@ class DBMock(DB):
     def create(self, values: dict[str, str]) -> str:
         DBMock._fix_input_types(values, self.field_types)
         id = self._next_id()
+        values['_id'] = id
         self._data[id] = values
         return id
     
@@ -119,7 +119,6 @@ class DBMock(DB):
         DBMock._fix_input_types(filter, self.field_types)
         result = []
         for id, obj in sorted(self._data.items(), key=lambda x: x[1][sort_field]):
-            obj['_id'] = id
             result.append(obj)
         if limit > 0:
             return result[skip:(skip+limit)]
@@ -141,6 +140,7 @@ class DBMock(DB):
     def replace(self, id: str, values: dict[str, str]) -> int:
         DBMock._fix_input_types(values, self.field_types)
         if id in self._data:
+            values['_id'] = id      # add back id since not included in replaced values
             self._data[id] = values
             return 1
         else:
