@@ -1,4 +1,4 @@
-from api_db import DBMongo
+from api_db import DBFactory, DBMongo, DBMock
 from flask import Flask, jsonify, request
 from logging.config import dictConfig
 from bson.objectid import ObjectId 
@@ -28,6 +28,7 @@ field_types = {}       # dict of non string type fields
 for f in int_fields: field_types[f] = 'INT'
 for f in date_fields: field_types[f] = 'DATE'
 sort_field = config['api']['sortby']
+dbtype = config['app']['dbtype']
 
 # locate path of demo data file
 __location__ = os.path.realpath(os.path.join(os.getcwd(), os.path.dirname(__file__)))
@@ -93,7 +94,7 @@ def handle_exception(err):
     return jsonify(response), err.code          
 
 # Instantiate db helper instance
-db = DBMongo()
+db = DBFactory.getDBType(dbtype)
 db.set_non_string_fields(field_types)
 
 
@@ -105,11 +106,11 @@ if db.num_data_reloads() == 0:
     db.reloaddata(demodatafile)
 
 # API Helper Functions
-def check_if_allowed(param):
+def check_if_allowed(param: str) -> None:
     if param not in params_allowed:
         raise APIObjectError('Unknown paramater: ' + param)  
 
-def check_for_required_fields(map, fields_required):
+def check_for_required_fields(map: dict[str,str]) -> None:
     for req in fields_required:
         if req not in map:
             raise APIObjectError(req + ' is a required field')   
@@ -130,7 +131,7 @@ def home():
 <html>
   <body>
     <h1>Album Database API</h1>
-        API server connected to Mongo DB: {db.host}:{db.port}<br>
+        API server connected to {db}<br>
         DB data reloads: {numreloads}<br>
         Entries in DB: {numrec}<br>  
         <p><b>API Base Url:</b> {baseurl}
@@ -171,7 +172,7 @@ def primarysearch():
 # GET ONE by id 
 @app.route(primaryroute+'/<id>', methods = ['GET'])
 def primaryget(id):
-    if not DBMongo.valid_id(id):
+    if not db.valid_id(id):
         return jsonify({'Invalid id': id}), 400
     data = db.get(id)
     if data != None:
@@ -182,12 +183,12 @@ def primaryget(id):
 # CREATE ONE 
 @app.route(primaryroute, methods = ['POST'])
 def primarycreate():
-    myobj = {}
+    values = {}
     for k in request.form: 
-        myobj[k] = request.form[k]
+        values[k] = request.form[k]
         check_if_allowed(k)
-    check_for_required_fields(myobj, fields_required)
-    id = db.create(myobj)
+    check_for_required_fields(values)
+    id = db.create(values)
     href = request.base_url + '/' + str(id)
     return jsonify({'Result': 'Object Created', 
                     '_id': id,
@@ -196,34 +197,34 @@ def primarycreate():
 # REPLACE ONE by id
 @app.route(primaryroute+'/<id>', methods = ['PUT'])
 def primaryreplace(id):
-    if not DBMongo.valid_id(id):
+    if not db.valid_id(id):
         return jsonify({'Invalid id': id}), 400
-    mappings = {}
+    values = {}
     for k in request.form: 
-        mappings[k] = request.form[k]
+        values[k] = request.form[k]
         check_if_allowed(k)
-    check_for_required_fields(mappings, fields_required)
-    cnt = db.replace(id, mappings)
+    check_for_required_fields(values)
+    cnt = db.replace(id, values)
     href = request.base_url
     return jsonify({'Result': f'{cnt} replaced', '_href': href}), 200
         
 # UPDATE ONE by id
 @app.route(primaryroute+'/<id>', methods = ['PATCH'])
 def primaryupdate(id):
-    if not DBMongo.valid_id(id):
+    if not db.valid_id(id):
         return jsonify({'Invalid id': id}), 400
-    mappings = {}
+    values = {}
     for k in request.form: 
-        mappings[k] = request.form[k]
+        values[k] = request.form[k]
         check_if_allowed(k)
-    cnt = db.update(id, mappings)
+    cnt = db.update(id, values)
     href = request.base_url
     return jsonify({'Result': f'{cnt} updated', '_href': href}), 200
 
 # DELETE ONE by id
 @app.route(primaryroute+'/<id>', methods = ['DELETE'])
 def primarydelete(id):
-    if not DBMongo.valid_id(id):
+    if not db.valid_id(id):
         return jsonify({'Invalid id': id}), 400
     cnt = db.delete(id)
     if (cnt > 0):
